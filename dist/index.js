@@ -1090,7 +1090,7 @@ async function vercelDeploy(ref, commit) {
   await exec.exec(
     'npx',
     [
-      'vercel --confirm',
+      'vercel',
       ...vercelArgs.split(/ +/),
       '-t',
       vercelToken,
@@ -1114,6 +1114,7 @@ async function vercelDeploy(ref, commit) {
       `githubCommitMessage=${commit}`,
       '-m',
       `githubCommitRef=${ref}`,
+      '--confirm'
     ],
     options,
   );
