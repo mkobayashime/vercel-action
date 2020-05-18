@@ -55,7 +55,7 @@ async function vercelDeploy(ref, commit) {
   await exec.exec(
     'npx',
     [
-      'vercel',
+      'vercel --confirm',
       ...vercelArgs.split(/ +/),
       '-t',
       vercelToken,
