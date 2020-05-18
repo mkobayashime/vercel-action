@@ -79,7 +79,7 @@ async function vercelDeploy(ref, commit) {
       `githubCommitMessage=${commit}`,
       '-m',
       `githubCommitRef=${ref}`,
-      '--confirm'
+      '--confirm',
     ],
     options,
   );
